@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Einladung zum 70. Geburtstag - Brunch</title>
+ <script src="https://cdn.tailwindcss.com"></script>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+ <style>
+ body {
+ font-family: 'Montserrat', sans-serif;
+ background-color: #fcfaf7;
+ }
+ .serif {
+ font-family: 'Playfair Display', serif;
+ }
+ .gold-text {
+ background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ }
+ .border-gold {
+ border: 2px solid transparent;
+ border-image: linear-gradient(to bottom right, #bf953f, #fcf6ba, #aa771c) 1;
+ }
+ .ornament {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin: 1rem 0;
+ }
+ .ornament::before, .ornament::after {
+ content: "";
+ height: 1px;
+ width: 30px;
+ background: #bf953f;
+ margin: 0 10px;
+ }
+ .animate-up {
+ animation: slideUp 1s ease-out forwards;
+ }
+ @keyframes slideUp {
+ from { opacity: 0; transform: translateY(15px); }
+ to { opacity: 1; transform: translateY(0); }
+ }
+
+ /* PRINT OPTIMIZATION */
+ @media print {
+ .no-print { display: none !important; }
+ body { 
+   background: white !important; 
+   margin: 0; 
+   padding: 0;
+ }
+ .max-w-lg { 
+   max-width: 100% !important; 
+   width: 100% !important;
+   border: 2px solid #bf953f !important; 
+   box-shadow: none !important; 
+   margin: 0 auto;
+   padding: 2rem !important;
+ }
+ .serif { font-family: 'Playfair Display', serif !important; }
+ .gold-text { 
+   -webkit-text-fill-color: #b38728 !important; 
+   background: none !important; 
+ }
+ }
+ </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+ <div class="max-w-lg w-full bg-white shadow-2xl relative border-gold p-8 md:p-12 text-center animate-up">
+
+ <header>
+ <p class="serif italic text-lg text-amber-700 mb-2">Herzliche Einladung zum</p>
+ <h1 class="serif text-4xl md:text-5xl font-bold text-gray-800 mb-2">Geburtstags-Brunch</h1>
+ <div class="serif text-7xl md:text-8xl font-bold gold-text leading-none">70</div>
+ <p class="serif text-xl text-gray-600 tracking-[0.25em] uppercase mt-2 mb-6">Jahre</p>
+ </header>
+
+ <div class="ornament text-amber-600">
+ <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+ </div>
+
+ <main class="space-y-6">
+ <div class="px-4">
+ <p class="serif text-lg md:text-xl text-gray-700 italic mb-4">
+ "Man wird nicht älter, sondern besser!"
+ </p>
+ <p class="text-gray-600 leading-relaxed">
+ Ich feiere meinen runden Geburtstag mit einem gemütlichen Brunch und du bist herzlich eingeladen.
+ </p>
+ </div>
+
+ <div class="bg-amber-50/50 border-y border-amber-100 py-6 my-6">
+ <h3 class="text-[10px] uppercase tracking-[0.4em] text-amber-800 font-bold mb-4">Eckdaten</h3>
+ <div class="space-y-3 text-gray-800">
+ <div class="flex flex-col">
+ <span class="text-[9px] uppercase text-gray-400 tracking-widest">Wann</span>
+ <p class="font-semibold">Samstag, 03. Oktober 2026</p>
+ </div>
+ <div class="flex flex-col">
+ <span class="text-[9px] uppercase text-gray-400 tracking-widest">Beginn</span>
+ <p class="font-semibold">Ab 11:00 Uhr</p>
+ </div>
+ <div class="flex flex-col"><span class="text-[9px] uppercase text-gray-400 tracking-widest">Wo</span>
+ <p class="font-semibold">Müllersweiden in Eschwege</p>
+ </div>
+ </div>
+ </div>
+
+ <p class="text-gray-700 font-medium italic">
+ Lass uns gemeinsam feiern, lachen und auf die vergangenen sieben Jahrzehnte anstoßen.
+ </p>
+
+ <p class="serif text-lg font-bold text-gray-800 pt-2">
+ Ich freue mich auf dein Kommen!
+ </p>
+ </main>
+
+ <footer class="mt-10 flex flex-col sm:flex-row justify-center gap-3 no-print">
+ <button onclick="window.print()" class="px-6 py-2 bg-stone-800 text-white rounded hover:bg-stone-700 transition-all text-xs uppercase tracking-widest flex items-center justify-center gap-2">
+ <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+ Drucken
+ </button>
+ <button onclick="copyLink()" id="copyBtn" class="px-6 py-2 border border-stone-300 text-stone-600 rounded hover:bg-stone-50 transition-all text-xs uppercase tracking-widest flex items-center justify-center gap-2">
+ <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0-7.07 7.07l1.71-1.71"></path></svg>
+ Link kopieren
+ </button>
+ </footer>
+ </div>
+
+ <script>
+ function copyLink() {
+ const el = document.createElement('textarea');
+ el.value = window.location.href;
+ document.body.appendChild(el);
+ el.select();
+ document.execCommand('copy');
+ document.body.removeChild(el);
+
+ const btn = document.getElementById('copyBtn');
+ btn.innerHTML = "Kopiert!";
+ setTimeout(() => {
+ btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0-7.07 7.07l1.71-1.71"></path></svg> Link kopieren`;
+ }, 2000);
+ }
+ </script>
+
+</body>
+</html>
